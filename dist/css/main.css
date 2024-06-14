@@ -1,0 +1,165 @@
+/* CUSTOM PROPS */
+:root {
+    --color-brown: #d87d4a;
+    --color-brown-light: #fbaf85;
+    --color-black: #000000;
+    --color-grey-dark: #101010;
+    --color-grey-darker: #4c4c4c;
+    --color-grey: #f1f1f1;
+    --color-light: #fafafa;
+    --color-white: #ffffff;
+    --color-red: #cd2c2c;
+    --color-primary: #d87d4a;
+    --color-bg-body: #fafafa;
+    --color-body-text: #000000;
+    --color-border: #cfcfcf;
+    --color-error: #cd2c2c;
+    --container-padding: 24px;
+}
+
+/*
+  Josh's Custom CSS Reset + some modifications
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* GLOBAL */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 166.667%;
+  background-color: var(--color-bg-body);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: color, opacity;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  opacity: 0.6;
+}
+
+*:focus {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* AUTOFILL-STYLES */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-color: var(--color-border);
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* PLACEHOLDER-STYLES */
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
+}
