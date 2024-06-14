@@ -163,3 +163,36 @@ select:-webkit-autofill:focus {
   color: rgba(52, 49, 61, 0.5);
   opacity: 1;
 }
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  padding: 20px 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  text-decoration: none;
+}
+.sitenav__link {
+  text-decoration: none;
+  color: #302929;
+}
+.sitenav__link:hover {
+  color: #B0CC0D;
+  text-decoration: underline;
+}
