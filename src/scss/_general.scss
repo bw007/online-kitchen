@@ -1,0 +1,60 @@
+@use "sass:color";
+
+/* GLOBAL */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 166.667%;
+  background-color: var(--color-bg-body);
+  color: color.scale($color-black, $alpha: -50%);
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  @include transition(color, opacity);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+*:focus {
+  @include outline(var(--color-primary));
+}
+
+/* AUTOFILL-STYLES */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-color: var(--color-border);
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* PLACEHOLDER-STYLES */
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
+}

@@ -1,0 +1,71 @@
+@mixin outline ($outline-color) {
+  outline: 2px dashed $outline-color;
+  outline-offset: 3px;
+}
+
+@mixin transition ($properties...) {
+  transition-duration: $transition-duration;
+  transition-timing-function: ease;
+  transition-property: $properties;
+}
+
+@mixin breakpoint-up ($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down ($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin retina-bg () {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin round-card ($width, $height, $bdrs: 8px, $bgcolor: $color-grey) {
+  width: $width;
+  height: $height;
+  border-radius: $bdrs;
+  background-color: $bgcolor;
+}
+
+@mixin product-shadow ($bottom, $width, $height, $opacity) {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: $bottom;
+  transform: translateX(-50%);
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  opacity: $opacity;
+  content: "";
+  filter: blur(21.746253967285156px);
+}
+
+@mixin page-section-heading () {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.05356rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+
+  @include breakpoint-up($breakpoint-medium-small) {
+    font-size: 2rem;
+    line-height: 112.5%;
+    letter-spacing: 0.07144rem;
+  }
+}
