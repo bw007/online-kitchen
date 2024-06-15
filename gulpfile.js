@@ -24,14 +24,14 @@ const path = {
     images: 'dist/imgs/',
   },
   src: {
-    font: 'src/fonts/*',
+    font: 'src/fonts/**/*',
     pug: 'src/pug/pages/**/*.pug',
     js: 'src/js/*.js',
     css: 'src/scss/main.scss',
     images: 'src/imgs/**/*.{jpg,png,svg,gif,ico}',
   },
   watch: {
-    font: 'src/fonts/*',
+    font: 'src/fonts/**/*',
     pug: 'src/pug/**/*.pug',
     js: 'src/js/**/*.js',
     css: 'src/scss/**/*.scss',
@@ -39,6 +39,7 @@ const path = {
   },
   clean: './dist',
 };
+
 
 function browserSync(done) {
   browsersync.init({
@@ -92,7 +93,7 @@ function pug() {
 }
 
 function font() {
-  return gulp.src(path.src.font, { base: 'src/fonts/' })
+  return gulp.src(path.src.font, { base: 'src/fonts' })
     .pipe(gulp.dest(path.build.font))
     .pipe(browsersync.stream());
 }
