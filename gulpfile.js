@@ -40,7 +40,6 @@ const path = {
   clean: './dist',
 };
 
-
 function browserSync(done) {
   browsersync.init({
     server: {
