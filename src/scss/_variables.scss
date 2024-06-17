@@ -1,50 +1,69 @@
 // Sass variables
 // Colors
-$color-brown: #d87d4a;
-$color-brown-light: #fbaf85;
-$color-black: #000000;
-$color-grey-dark: #101010;
-$color-grey-darker: #4c4c4c;
-$color-grey: #f1f1f1;
-$color-light: #fafafa;
-$color-white: #ffffff;
-$color-red: #cd2c2c;
+// $color-brown: #d87d4a;
+// $color-brown-light: #fbaf85;
+// $color-black: #000000;
+// $color-grey-dark: #101010;
+// $color-grey-darker: #4c4c4c;
+// $color-grey: #f1f1f1;
+// $color-light: #fafafa;
+// $color-white: #ffffff;
+// $color-red: #cd2c2c;
 
-$color-primary: $color-brown;
-$color-bg-body: $color-light;
-$color-bg-hero: #191919;
-$color-body-text: $color-black;
+// $color-primary: $color-brown;
+// $color-bg-body: $color-light;
+// $color-bg-hero: #191919;
+// $color-body-text: $color-black;
 
-// Spacing
-$container-padding: 24px;
+// // Spacing
+// $container-padding: 24px;
 
-// Effects
-$transition-duration: 0.3s;
+// // Effects
+// $transition-duration: 0.3s;
 
-// Breakpoints
-$breakpoint-small: 23.4375em;
-$breakpoint-medium-small: 40em;
-$breakpoint-medium: 48em;
-$breakpoint-large: 62em;
-$breakpoint-container: 74.375em;
+// // Breakpoints
+// $breakpoint-small: 23.4375em;
+// $breakpoint-medium-small: 40em;
+// $breakpoint-medium: 48em;
+// $breakpoint-large: 62em;
+// $breakpoint-container: 74.375em;
 
-/* CUSTOM PROPS */
+// /* CUSTOM PROPS */
+// :root {
+//   --color-brown: #{$color-brown};
+//   --color-brown-light: #{$color-brown-light};
+//   --color-black: #{$color-black};
+//   --color-grey-dark: #{$color-grey-dark};
+//   --color-grey-darker: #{$color-grey-darker};
+//   --color-grey: #{$color-grey};
+//   --color-light: #{$color-light};
+//   --color-white: #{$color-white};
+//   --color-red: #{$color-red};
+
+//   --color-primary: #{$color-primary};
+//   --color-bg-body: #{$color-bg-body};
+//   --color-body-text: #{$color-body-text};
+//   --color-border: #cfcfcf;
+//   --color-error: #{$color-red};
+
+//   --container-padding: #{$container-padding};
+// }
+
 :root {
-  --color-brown: #{$color-brown};
-  --color-brown-light: #{$color-brown-light};
-  --color-black: #{$color-black};
-  --color-grey-dark: #{$color-grey-dark};
-  --color-grey-darker: #{$color-grey-darker};
-  --color-grey: #{$color-grey};
-  --color-light: #{$color-light};
-  --color-white: #{$color-white};
-  --color-red: #{$color-red};
+  --color-brown: #FFA800;
+  --color-green: #B0CC0D;
+  --color-dark: #302929;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey: #F4F4F4;
+  --color-grey-light: #D9D9D9;
+  --color-grey-dark: #6A6A6A;
+  --color-white-50: #FFFFFF;
+  --color-green-dark: #8EC038;
 
-  --color-primary: #{$color-primary};
-  --color-bg-body: #{$color-bg-body};
-  --color-body-text: #{$color-body-text};
-  --color-border: #cfcfcf;
-  --color-error: #{$color-red};
+  --color-secondary: var(--color-grey-light);
+  --color-success: var(--color-green-dark);
+  --color-warning: var(--color-brown);
 
-  --container-padding: #{$container-padding};
+  --container-padding: 40px;
 }

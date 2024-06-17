@@ -5,26 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen</title>
     <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="header-hero">
       <!-- HEADER-->
       <header class="header">
         <div class="header__container container">
-          <!-- LOGO--><a class="header__logo logo" href="index.html" aria-label="Home page"><img class="logo__img" src="imgs/logo.svg" alt="Brand logo" width="183" height="62"></a>
-          <!-- SITENAV-->
-          <nav class="header__sitenav sitenav">
-            <ul class="sitenav__list" role="list">
-              <li class="sitenav__item sitenav__item--active" role="listitem"><a class="sitenav__link" href="#">Menu</a></li>
-              <li class="sitenav__item" role="listitem"><a class="sitenav__link" href="#">Delivery</a></li>
-              <li class="sitenav__item" role="listitem"><a class="sitenav__link" href="#">FAQ</a></li>
-              <li class="sitenav__item" role="listitem"><a class="sitenav__link" href="#">Contacts</a></li>
+          <!-- BAR ICON-->
+          <div class="header__bar-icon header__bar-icon--acstive"><span></span><span></span><span></span></div>
+          <!-- LOGO--><a class="header__logo logo" href="index.html" aria-label="Home page"><img class="logo__img" src="./imgs/logo.svg" alt="Brand logo" width="183" height="62"></a>
+          <!-- NAVBAR-->
+          <nav class="header__nav nav">
+            <ul class="nav__list" role="list">
+              <li class="nav__item nav__item--active" role="listitem"><a class="nav__link" href="#">Menu</a></li>
+              <li class="nav__item" role="listitem"><a class="nav__link" href="#">Delivery</a></li>
+              <li class="nav__item" role="listitem"><a class="nav__link" href="#">FAQ</a></li>
+              <li class="nav__item" role="listitem"><a class="nav__link" href="#">Contacts</a></li>
             </ul>
-          </nav>
-          <div class="phone"></div>
-          <div class="user"></div>
+          </nav><a class="header__call" href="tel:+99812345678"> <img src="./imgs/phone-icon.svg">591 902 883</a>
+          <div class="header__lang lang">
+            <div class="lang__items">
+              <label for="0">
+                <input class="lang__input" type="radio" id="0" value="en" name="lang"><span class="lang__text">en</span>
+              </label>
+            </div>
+            <div class="lang__icon"><img src="./imgs/arrow-down.svg"></div>
+          </div><a class="header__auth btn" href="#"> <img src="./imgs/avatar.svg"><span>Sign in</span></a>
         </div>
       </header>
     </div>
+    <!-- FOOTER-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__info"><a class="footer__logo" href="index.html" aria-label="Home page"><img src="./imgs/footer-logo.svg" alt="Logo" width="183" height="61"></a>
+          <div class="footer__social"><a class="footer__link" href="#"><img src="./imgs/telegram.svg"></a><a class="footer__link" href="#"><img src="./imgs/instagram.svg"></a><a class="footer__link" href="#"><img src="./imgs/facebook.svg"></a></div>
+          <p class="copyright">Chef Kitchen 2023</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

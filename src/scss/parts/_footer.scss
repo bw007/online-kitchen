@@ -1,0 +1,14 @@
+.footer {
+  padding: 62px 0;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  &__container {}
+  &__info {
+    @include flex(center, flex-start, column);
+  }
+  &__logo {}
+  &__social {
+    @include flex(center, flex-start);
+  }
+
+}

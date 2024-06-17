@@ -1,0 +1,37 @@
+.header-hero
+  // HEADER
+  header.header
+    .header__container.container
+      // BAR ICON
+      .header__bar-icon.header__bar-icon--acstive
+        span
+        span
+        span
+      // LOGO
+      a.header__logo.logo(href="index.html", aria-label="Home page")
+        img.logo__img(src="./imgs/logo.svg", alt="Brand logo", width="183", height="62")
+      // NAVBAR
+      nav.header__nav.nav
+        ul.nav__list(role="list")
+          li.nav__item.nav__item--active(role="listitem")
+            a.nav__link(href="#") Menu
+          li.nav__item(role="listitem")
+            a.nav__link(href="#") Delivery
+          li.nav__item(role="listitem")
+            a.nav__link(href="#") FAQ
+          li.nav__item(role="listitem")
+            a.nav__link(href="#") Contacts
+      a.header__call(href="tel:+99812345678") 
+        img(src="./imgs/phone-icon.svg")
+        | 591 902 883
+      .header__lang.lang
+        .lang__items
+          each val, index in ['en']
+            label(for = index)
+              input.lang__input(type="radio", id = index, value = val, name="lang")
+              span.lang__text= val
+        .lang__icon
+          img(src="./imgs/arrow-down.svg")
+      a.header__auth.btn(href="#") 
+        img(src="./imgs/avatar.svg")
+        span Sign in

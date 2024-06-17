@@ -5,38 +5,4 @@
 @import "fonts";
 @import "general";
 @import "blocks/blocks-all";
-
-.container {
-  width: 100%;
-  max-width: 1300px;
-  padding-right: 50px;
-  padding-left: 50px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.header {
-  padding: 20px 0;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.sitenav {
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    text-decoration: none;
-  }
-  &__link {
-    text-decoration: none;
-    color: #302929;
-    &:hover {
-      color: #B0CC0D;
-      text-decoration: underline;
-    }
-  }
-}
+@import "parts/parts-all";
