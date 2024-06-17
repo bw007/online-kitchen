@@ -4,7 +4,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   &__container {
-    @include flex(space-between, center, row, 24px);
+    @include flex(space-between, center, $g: 24px);
     @media only screen and (max-width: 32.5em) {
       gap: 8px;
     }
@@ -37,7 +37,7 @@
     }
   }
   &__call {
-    @include flex(center, center, row, 8px);
+    @include flex(center, center, $g: 8px);
     font-weight: bold;
     font-size: 15px;
     @media only screen and (max-width: 64em) {
@@ -45,7 +45,7 @@
     }
   }
   &__lang {
-    @include flex(center, flex-start, row, 0);
+    @include flex(center);
     margin-right: auto;
     @media only screen and (max-width: 64em) {
       margin-left: auto;
@@ -53,7 +53,7 @@
     }
   }
   &__auth {
-    @include flex(space-between, center, row, 0);
+    @include flex(space-between, center);
     width: 140px;
     height: 35px;
     border-radius: 50px;
@@ -75,7 +75,7 @@
 
 .nav {
   &__list {
-    @include flex(center, center, row, 74px);
+    @include flex(center, center, $g: 74px);
     @media only screen and (max-width: 75em) {
       gap: 45px;
     }
@@ -98,7 +98,7 @@
 
 .lang {
   &__items {
-    @include flex(center, center, column, 0);
+    @include flex(center, center, column);
   }
   &__input {
     display: none;
@@ -120,7 +120,7 @@
   }
   &__icon {
     cursor: pointer;
-    @include flex(center, center, row, 0);
+    @include flex(center, center);
     width: 24px;
     height: 24px;
   }
